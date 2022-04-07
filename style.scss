@@ -1,2 +1,60 @@
-h1
-  color: red
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto+Slab:wght@600&display=swap');
+
+$color-cat: #0059bf;
+$color-heading: #000;
+$color-par: #606669;
+$border-list: #ccc;
+$font-heading:'Roboto Slab', serif;
+$font-para:'Lato', sans-serif;
+$spacing-mini: 16px;
+$spacing-base:24px;
+
+
+@mixin common-list-styles{
+   padding : 0 $spacing-base;
+
+  li {
+    list-style-type: none;
+   padding : $spacing-base 0 $spacing-base;
+   border-bottom: 1px solid $border-list;
+  }
+}
+
+@mixin category{
+  color:$color-cat;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $font-para;
+
+}
+
+@mixin heading-h3{
+  color:$color-heading;
+  font-size: 24px;
+  line-height: 32px;
+  font-family: $font-heading;
+  margin: $spacing-mini 0;
+}
+
+@mixin stand-first{
+  color:$color-par;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: $font-para;
+}
+
+.cs-cat{
+  @include category;
+}
+.cs-heading {
+@include heading-h3;
+}
+
+.cs-para{
+  @include stand-first;
+}
+
+.cs-list{
+@include common-list-styles;
+}

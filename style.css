@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto+Slab:wght@600&display=swap");
+.cs-cat {
+  color: #0059bf;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Lato", sans-serif; }
+
+.cs-heading {
+  color: #000;
+  font-size: 24px;
+  line-height: 32px;
+  font-family: "Roboto Slab", serif;
+  margin: 16px 0; }
+
+.cs-para {
+  color: #606669;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: "Lato", sans-serif; }
+
+.cs-list {
+  padding: 0 24px; }
+  .cs-list li {
+    list-style-type: none;
+    padding: 24px 0 24px;
+    border-bottom: 1px solid #ccc; }
+
+/*# sourceMappingURL=style.css.map */
