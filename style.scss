@@ -9,6 +9,26 @@ $font-heading:'Roboto Slab', serif;
 $font-para:'Lato', sans-serif;
 $spacing-mini: 16px;
 $spacing-base:24px;
+$tablet:768px;
+$desktop:1024px;
+
+
+
+@mixin grid-limit-medium{
+
+  padding: 0 $spacing-base;
+    margin: 0 auto;
+
+
+  @media screen and (min-width: $tablet) {
+    max-width: $tablet;
+    padding: 0 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: $desktop;
+  }
+}
 
 
 @mixin common-list-styles{
@@ -18,6 +38,9 @@ $spacing-base:24px;
     list-style-type: none;
    padding : $spacing-base 0 $spacing-base;
    border-bottom: 1px solid $border-list;
+   display: flex;
+   justify-content: space-between;
+   gap:$spacing-base;
   }
 }
 
@@ -44,8 +67,13 @@ $spacing-base:24px;
   font-family: $font-para;
 }
 
+.inner-container{
+@include grid-limit-medium;
+}
+
 .cs-cat{
   @include category;
+  text-decoration: none;
 }
 .cs-heading {
 @include heading-h3;
@@ -57,4 +85,13 @@ $spacing-base:24px;
 
 .cs-list{
 @include common-list-styles;
+}
+
+
+.cs-section-right {
+width: 200px;
+height: 200px;
+display: block;
+background: $border-list;
+flex-shrink: 0;
 }
