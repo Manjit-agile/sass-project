@@ -1,9 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto+Slab:wght@600&display=swap");
+.inner-container {
+  padding: 0 24px;
+  margin: 0 auto; }
+  @media screen and (min-width: 768px) {
+    .inner-container {
+      max-width: 768px;
+      padding: 0 0; } }
+  @media screen and (min-width: 1024px) {
+    .inner-container {
+      max-width: 1024px; } }
+
 .cs-cat {
   color: #0059bf;
   font-size: 14px;
   line-height: 18px;
-  font-family: "Lato", sans-serif; }
+  font-family: "Lato", sans-serif;
+  text-decoration: none; }
 
 .cs-heading {
   color: #000;
@@ -23,6 +35,16 @@
   .cs-list li {
     list-style-type: none;
     padding: 24px 0 24px;
-    border-bottom: 1px solid #ccc; }
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px; }
+
+.cs-section-right {
+  width: 200px;
+  height: 200px;
+  display: block;
+  background: #ccc;
+  flex-shrink: 0; }
 
 /*# sourceMappingURL=style.css.map */
